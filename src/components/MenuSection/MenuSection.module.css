@@ -1,0 +1,144 @@
+.section {
+  padding: var(--space-xl) 0;
+}
+
+.section:nth-child(even) {
+  background-color: var(--color-pink-pale);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+.reversed .inner {
+  direction: rtl;
+}
+
+.reversed .inner > * {
+  direction: ltr;
+}
+
+.imageWrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  aspect-ratio: 4 / 5;
+}
+
+.imageBackground {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(28px) brightness(0.75) saturate(1.15);
+  transform: scale(1.15);
+}
+
+.image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.content h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--color-brown);
+}
+
+.tagline {
+  font-family: var(--font-script);
+  font-size: 1.25rem;
+  color: var(--color-pink-dark);
+}
+
+.portion {
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-gold-dark);
+  background: rgba(216, 154, 78, 0.14);
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  width: fit-content;
+  margin-top: 0.3rem;
+}
+
+.items {
+  list-style: none;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px dashed rgba(92, 58, 46, 0.18);
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.itemName {
+  font-weight: 700;
+  color: var(--color-brown);
+  font-size: 1.02rem;
+}
+
+.itemPrice {
+  font-weight: 800;
+  color: var(--color-pink-dark);
+  font-size: 1.05rem;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.orderButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.4rem;
+  width: fit-content;
+  background-color: var(--color-pink-primary);
+  color: var(--color-white);
+  font-weight: 800;
+  padding: 0.9rem 1.7rem;
+  border-radius: 50px;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.orderButton:hover {
+  background-color: var(--color-pink-dark);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 860px) {
+  .inner,
+  .reversed .inner {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .imageWrap {
+    aspect-ratio: 4 / 3;
+  }
+}

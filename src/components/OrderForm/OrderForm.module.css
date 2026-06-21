@@ -1,0 +1,70 @@
+.form {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.form h3 {
+  font-size: 1.5rem;
+  color: var(--color-brown);
+}
+
+.helper {
+  font-size: 0.95rem;
+  color: var(--color-brown-soft);
+  margin-top: -0.6rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.field span {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--color-brown);
+}
+
+.field input,
+.field select,
+.field textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--color-pink-pale);
+  background-color: var(--color-cream);
+  color: var(--color-brown);
+  resize: vertical;
+  transition: border-color 0.2s ease;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--color-pink-primary);
+  outline: none;
+}
+
+.submit {
+  background-color: var(--color-whatsapp);
+  color: var(--color-white);
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 0.95rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  margin-top: 0.4rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.submit:hover {
+  background-color: var(--color-whatsapp-dark);
+  transform: translateY(-2px);
+}

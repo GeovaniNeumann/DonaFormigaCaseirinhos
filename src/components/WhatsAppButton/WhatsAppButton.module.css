@@ -1,0 +1,62 @@
+.floatingButton {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: var(--color-whatsapp);
+  color: var(--color-white);
+  padding: 0.85rem 1.25rem;
+  border-radius: 50px;
+  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.4);
+  font-weight: 800;
+  font-size: 0.95rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  animation: pulse 2.6s ease-in-out infinite;
+}
+
+.floatingButton:hover {
+  background-color: var(--color-whatsapp-dark);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 14px 28px rgba(37, 211, 102, 0.45);
+}
+
+.icon {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.label {
+  white-space: nowrap;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 10px 24px rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    box-shadow: 0 10px 24px rgba(37, 211, 102, 0.65), 0 0 0 8px rgba(37, 211, 102, 0.12);
+  }
+}
+
+@media (max-width: 640px) {
+  .floatingButton {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.85rem;
+    border-radius: 50%;
+  }
+
+  .label {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floatingButton {
+    animation: none;
+  }
+}

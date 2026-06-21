@@ -1,0 +1,171 @@
+.hero {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(180deg, var(--color-pink-pale) 0%, var(--color-cream) 100%);
+  padding: calc(84px + var(--space-xl)) 0 var(--space-2xl);
+  overflow: hidden;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-pink-dark);
+  background: rgba(232, 99, 138, 0.1);
+  padding: 0.45rem 0.9rem;
+  border-radius: 50px;
+  width: fit-content;
+}
+
+.text h1 {
+  font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+  color: var(--color-brown);
+  font-weight: 700;
+}
+
+.highlight {
+  color: var(--color-pink-primary);
+  position: relative;
+}
+
+.lead {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--color-brown-soft);
+  max-width: 480px;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.4rem;
+}
+
+.primaryButton {
+  background-color: var(--color-pink-primary);
+  color: var(--color-white);
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 0.95rem 1.7rem;
+  border-radius: 50px;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.primaryButton:hover {
+  background-color: var(--color-pink-dark);
+  transform: translateY(-2px);
+}
+
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 0.95rem 1.7rem;
+  border-radius: 50px;
+  border: 2px solid var(--color-pink-primary);
+  color: var(--color-pink-dark);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.secondaryButton:hover {
+  background-color: var(--color-pink-pale);
+  transform: translateY(-2px);
+}
+
+.script {
+  font-family: var(--font-script);
+  font-size: 1.5rem;
+  color: var(--color-gold-dark);
+  margin-top: 0.3rem;
+}
+
+.imageWrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.heroImage {
+  width: 100%;
+  max-width: 480px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.badge {
+  position: absolute;
+  bottom: -22px;
+  left: -22px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  box-shadow: var(--shadow-soft);
+  background: var(--color-white);
+}
+
+@media (max-width: 920px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+
+  .text {
+    order: 2;
+    align-items: center;
+    text-align: center;
+  }
+
+  .lead {
+    max-width: 100%;
+  }
+
+  .imageWrap {
+    order: 1;
+  }
+
+  .eyebrow {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .badge {
+    width: 80px;
+    height: 80px;
+    bottom: -14px;
+    left: -10px;
+  }
+
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    text-align: center;
+    width: 100%;
+  }
+}

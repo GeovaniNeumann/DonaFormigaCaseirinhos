@@ -1,0 +1,104 @@
+:root {
+  /* === Cores === */
+  --color-pink-primary: #e8638a;
+  --color-pink-dark: #d44d76;
+  --color-pink-soft: #f6a8bf;
+  --color-pink-pale: #fbe4e9;
+  --color-cream: #fdf3ee;
+  --color-brown: #5c3a2e;
+  --color-brown-soft: #8a5a45;
+  --color-gold: #d89a4e;
+  --color-gold-dark: #b9763a;
+  --color-white: #ffffff;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #1ebc59;
+
+  /* === Tipografia === */
+  --font-display: 'Baloo 2', system-ui, sans-serif;
+  --font-body: 'Nunito', system-ui, sans-serif;
+  --font-script: 'Caveat', cursive;
+
+  /* === Espaçamento === */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+
+  /* === Bordas / Sombras === */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+  --shadow-soft: 0 8px 24px rgba(216, 77, 118, 0.12);
+  --shadow-card: 0 10px 30px rgba(92, 58, 46, 0.1);
+
+  --max-width: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-brown);
+  background-color: var(--color-cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  line-height: 1.15;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
