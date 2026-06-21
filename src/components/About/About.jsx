@@ -18,7 +18,7 @@ function About({ compact = false }) {
           </p>
           <p>
             Tudo é preparado de forma artesanal, em pequenas quantidades, para garantir que cada
-            marmitinha chegue até você com aquele sabor de comida de casa — o sabor que abraça.
+            marmitinha chegue até você com aquele sabor de comida de casa o sabor que abraça.
           </p>
           {!compact && (
             <ul className={styles.values}>
